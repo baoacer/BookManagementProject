@@ -1,4 +1,4 @@
-package domain.Entity;
+package domain.Model;
 
 import java.util.Date;
 
@@ -90,6 +90,7 @@ public abstract class Book {
 
     // Abstract methods
     public abstract void calculateTotalPrice();
+
     public abstract String getBookType();
 
 }

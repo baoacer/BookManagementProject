@@ -2,7 +2,7 @@ package domain.service;
 
 import java.util.List;
 
-import domain.Entity.Book;
+import domain.Model.Book;
 
 public interface BookService {
 

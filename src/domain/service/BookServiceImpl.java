@@ -1,7 +1,8 @@
 package domain.service;
 
 import java.util.List;
-import domain.Entity.Book;
+
+import domain.Model.Book;
 import persistence.BookJdbc;
 
 public class BookServiceImpl implements BookService {

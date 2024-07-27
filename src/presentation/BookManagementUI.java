@@ -13,9 +13,9 @@ import Command_Processor.SearchBookCommand;
 import Command_Processor.UpdateBookCommand;
 import Command_Processor.BookController;
 import Command_Processor.CalculateAverageCommand;
-import domain.Entity.Book;
-import domain.Entity.ReferenceBook;
-import domain.Entity.TextBook;
+import domain.Model.Book;
+import domain.Model.ReferenceBook;
+import domain.Model.TextBook;
 import domain.service.BookService;
 import observer.Subscriber;
 

@@ -2,7 +2,7 @@ package Command_Processor;
 
 import java.util.List;
 
-import domain.Entity.Book;
+import domain.Model.Book;
 import domain.service.BookService;
 
 public class SearchBookByPublisherCommand implements Command {

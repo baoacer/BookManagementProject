@@ -6,9 +6,9 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import domain.Entity.Book;
-import domain.Entity.ReferenceBook;
-import domain.Entity.TextBook;
+import domain.Model.Book;
+import domain.Model.ReferenceBook;
+import domain.Model.TextBook;
 
 public class BookJdbcImpl implements BookJdbc {
 

@@ -1,7 +1,7 @@
 package Command_Processor;
 
-import domain.Entity.Book;
-import domain.Entity.TextBook;
+import domain.Model.Book;
+import domain.Model.TextBook;
 import domain.service.BookService;
 
 public class AddBookCommand implements Command {

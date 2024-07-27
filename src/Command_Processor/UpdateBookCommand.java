@@ -1,6 +1,6 @@
 package Command_Processor;
 
-import domain.Entity.Book;
+import domain.Model.Book;
 import domain.service.BookService;
 
 public class UpdateBookCommand implements Command {

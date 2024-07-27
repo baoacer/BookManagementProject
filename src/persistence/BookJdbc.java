@@ -2,7 +2,7 @@ package persistence;
 
 import java.util.List;
 
-import domain.Entity.Book;
+import domain.Model.Book;
 
 public interface BookJdbc {
     void addBook(Book book);
