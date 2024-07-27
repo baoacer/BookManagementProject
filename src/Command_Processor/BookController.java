@@ -8,10 +8,18 @@ import observer.Publisher;
 public class BookController extends Publisher {
 
     // Field
+    private static BookController bookController = null;
     private Queue<Command> commandQueue = new LinkedList<>();
 
     // Constructors
-    public BookController() {
+    private BookController() {
+    }
+
+    public static BookController makeBookController() {
+        if (bookController == null) {
+            bookController = new BookController();
+        }
+        return bookController;
     }
 
     // Method, Function
@@ -26,13 +34,5 @@ public class BookController extends Publisher {
             notifySubscribers();
         }
     }
-
-    // private static CommandProcessor commandProcessor = null;
-    // public static CommandProcessor makeCommandProcessor() {
-    // if (commandProcessor == null) {
-    // commandProcessor = new CommandProcessor();
-    // }
-    // return commandProcessor;
-    // }
 
 }

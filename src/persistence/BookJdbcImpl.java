@@ -17,6 +17,18 @@ public class BookJdbcImpl implements BookJdbc {
     private final String user = "root";
     private final String password = "root";
 
+    private static BookJdbcImpl instance;
+
+    private BookJdbcImpl() {
+    }
+
+    public static BookJdbcImpl makeBookJdbcImpl() {
+        if (instance == null) {
+            instance = new BookJdbcImpl();
+        }
+        return instance;
+    }
+
     private Connection connect() throws SQLException {
         return DriverManager.getConnection(url, user, password);
     }

@@ -90,7 +90,6 @@ public abstract class Book {
 
     // Abstract methods
     public abstract void calculateTotalPrice();
-
     public abstract String getBookType();
 
 }

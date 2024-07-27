@@ -7,9 +7,9 @@ import presentation.BookManagementUI;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        BookJdbc bookJdbc = new BookJdbcImpl();
+        BookJdbc bookJdbc = BookJdbcImpl.makeBookJdbcImpl();
         BookService bookService = new BookServiceImpl(bookJdbc);
-        BookController bookController = new BookController();
+        BookController bookController = BookController.makeBookController();
         BookManagementUI bookManagementUI = new BookManagementUI(bookController, bookService);
     }
 }
