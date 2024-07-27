@@ -1,4 +1,4 @@
-package view;
+package presentation;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;

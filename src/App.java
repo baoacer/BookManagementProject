@@ -3,7 +3,7 @@ import domain.service.BookService;
 import domain.service.BookServiceImpl;
 import persistence.BookJdbc;
 import persistence.BookJdbcImpl;
-import view.BookManagementUI;
+import presentation.BookManagementUI;
 
 public class App {
     public static void main(String[] args) throws Exception {
