@@ -5,14 +5,13 @@ import java.util.List;
 import domain.Model.Book;
 import domain.service.BookService;
 
-public class SearchBookByPublisherCommand implements Command {
+public class SearchBookByPublisherCommand extends Command {
 
-    private BookService bookService;
     private String search;
     private List<Book> results;
 
     public SearchBookByPublisherCommand(String search, BookService bookService) {
-        this.bookService = bookService;
+        super(bookService);
         this.search = search;
     }
 

@@ -2,13 +2,12 @@ package Command_Processor;
 
 import domain.service.BookService;
 
-public class RemoveBookCommand implements Command {
+public class RemoveBookCommand extends Command {
 
-    private BookService bookService;
     private int id;
 
     public RemoveBookCommand(int id, BookService bookService) {
-        this.bookService = bookService;
+        super(bookService);
         this.id = id;
     }
 

@@ -4,15 +4,12 @@ import domain.Model.Book;
 import domain.Model.TextBook;
 import domain.service.BookService;
 
-public class AddBookCommand implements Command {
+public class AddBookCommand extends Command {
 
-    private BookService bookService;
     private Book book;
 
     public AddBookCommand(Book book, BookService bookService) {
-
-        this.bookService = bookService;
-
+        super(bookService);
         if (book instanceof TextBook) {
             TextBook textBook = (TextBook) book;
             this.book = textBook;

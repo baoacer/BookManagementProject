@@ -22,11 +22,5 @@ public class BookController extends Publisher {
     public void processCommands(Command command) {
         command.execute();
         notifySubscribers();
-
     }
-
-    // public void execute(Command command) {
-    // command.execute();
-    // }
-
 }

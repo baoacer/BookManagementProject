@@ -2,13 +2,12 @@ package Command_Processor;
 
 import domain.service.BookService;
 
-public class CalculateAverageCommand implements Command {
+public class CalculateAverageCommand extends Command {
 
-    private BookService bookService;
     private double result;
 
     public CalculateAverageCommand(BookService bookService) {
-        this.bookService = bookService;
+        super(bookService);
     }
 
     @Override

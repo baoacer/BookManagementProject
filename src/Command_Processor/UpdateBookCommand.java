@@ -3,13 +3,12 @@ package Command_Processor;
 import domain.Model.Book;
 import domain.service.BookService;
 
-public class UpdateBookCommand implements Command {
+public class UpdateBookCommand extends Command {
 
-    private BookService bookService;
     private Book book;
 
     public UpdateBookCommand(Book book, BookService bookService) {
-        this.bookService = bookService;
+        super(bookService);
         this.book = book;
     }
 
