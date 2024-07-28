@@ -332,8 +332,7 @@ public class BookManagementUI extends JFrame implements Subscriber {
             }
 
             Command command = new AddBookCommand(book, bookService);
-            bookController.addCommand(command);
-            bookController.processCommands();
+            bookController.processCommands(command);
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -352,8 +351,7 @@ public class BookManagementUI extends JFrame implements Subscriber {
 
             int id = (int) tableModel.getValueAt(selectedRow, 0);
             Command command = new RemoveBookCommand(id, bookService);
-            bookController.addCommand(command);
-            bookController.processCommands();
+            bookController.processCommands(command);
 
             JOptionPane.showMessageDialog(this, "Book removed successfully.");
         } catch (Exception e) {
@@ -393,8 +391,7 @@ public class BookManagementUI extends JFrame implements Subscriber {
             }
 
             Command command = new UpdateBookCommand(book, bookService);
-            bookController.addCommand(command);
-            bookController.processCommands();
+            bookController.processCommands(command);
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -441,8 +438,7 @@ public class BookManagementUI extends JFrame implements Subscriber {
             }
 
             Command command = new SearchBookCommand(name, bookService);
-            bookController.addCommand(command);
-            bookController.processCommands();
+            bookController.processCommands(command);
             List<Book> books = ((SearchBookCommand) command).getResults();
 
             // Clear existing data in table
@@ -494,8 +490,7 @@ public class BookManagementUI extends JFrame implements Subscriber {
             }
 
             Command command = new SearchBookByPublisherCommand(publisher, bookService);
-            bookController.addCommand(command);
-            bookController.processCommands();
+            bookController.processCommands(command);
             List<Book> books = ((SearchBookByPublisherCommand) command).getResults();
 
             // Clear existing data in table
@@ -541,8 +536,7 @@ public class BookManagementUI extends JFrame implements Subscriber {
 
     private void calculateAveragePrice() {
         Command command = new CalculateAverageCommand(bookService);
-        bookController.addCommand(command);
-        bookController.processCommands();
+        bookController.processCommands(command);
 
         double result = ((CalculateAverageCommand) command).getResult();
 
